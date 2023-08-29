@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TabStyle">
+        <item name="tabIndicatorColor">@color/color_blue</item>
+    </style>
+
+    <style name="TabTitleStyle" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">@color/color_black</item>
+        <item name="fontFamily">@font/ys_display_medium</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="TextItemStyle">
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:fontFamily">@font/ys_display_regular</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+</resources>

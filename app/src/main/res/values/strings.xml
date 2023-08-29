@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Практикум</string>
+
+    <string name="button_name">Кнопка</string>
+    <string name="first_item">Текст</string>
+    <string name="second_item">Картинки</string>
+    <string name="third_item">Цвета</string>
+</resources>
