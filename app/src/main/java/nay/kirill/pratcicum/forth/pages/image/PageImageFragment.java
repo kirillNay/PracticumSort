@@ -11,12 +11,13 @@ import androidx.fragment.app.Fragment;
 import nay.kirill.pratcicum.forth.ListenersHolder;
 import nay.kirill.pratcicum.forth.R;
 import nay.kirill.pratcicum.forth.databinding.FragmentItemBinding;
+import nay.kirill.pratcicum.forth.pages.items.ItemsHolder;
 
 public class PageImageFragment extends Fragment implements ListenersHolder.OnItemsChanged {
 
     private FragmentItemBinding binding;
 
-    private ListImageAdapter adapter = new ListImageAdapter(ImageItem.images);
+    private ListImageAdapter adapter = new ListImageAdapter(ItemsHolder.imageItems);
 
     PageImageFragment() { super(R.layout.fragment_item); }
 

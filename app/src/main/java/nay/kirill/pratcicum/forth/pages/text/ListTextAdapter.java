@@ -53,7 +53,7 @@ public class ListTextAdapter extends RecyclerView.Adapter {
         }
 
         private void setClickListener(TextItem item) {
-            // TODO добавить обработку нажатия на кнопку
+            // TODO (2) добавить обработку нажатия на кнопку
         }
     }
 

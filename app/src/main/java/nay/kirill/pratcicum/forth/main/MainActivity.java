@@ -11,9 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import nay.kirill.pratcicum.forth.ListenersHolder;
 import nay.kirill.pratcicum.forth.R;
 import nay.kirill.pratcicum.forth.databinding.ActivityMainBinding;
-import nay.kirill.pratcicum.forth.pages.color.ColorItem;
-import nay.kirill.pratcicum.forth.pages.image.ImageItem;
-import nay.kirill.pratcicum.forth.pages.text.TextItem;
+import nay.kirill.pratcicum.forth.pages.items.ItemsHolder;
 import nay.kirill.pratcicum.forth.pages.utils.ListShuffler;
 import nay.kirill.pratcicum.forth.pages.utils.ListSorter;
 
@@ -72,20 +70,24 @@ public class MainActivity extends AppCompatActivity {
     private void sort() {
         showMessage("Отсортировано!");
 
+        sorter.sort(ItemsHolder.textItems);
+        sorter.sort(ItemsHolder.imageItems);
+        sorter.sort(ItemsHolder.colorItems);
         ListenersHolder.getInstance().itemsChanged();
     }
 
     // Тасовка списка
     private void shuffle() {
         showMessage("Перетасовано!");
-        shuffler.shuffle(TextItem.texts);
-        shuffler.shuffle(ImageItem.images);
-        shuffler.shuffle(ColorItem.colors);
+
+        shuffler.shuffle(ItemsHolder.textItems);
+        shuffler.shuffle(ItemsHolder.imageItems);
+        shuffler.shuffle(ItemsHolder.colorItems);
         ListenersHolder.getInstance().itemsChanged();
     }
 
     private void setButtonListener() {
-        // TODO добавить обработку нажатия на кнопку
+        // TODO (1) добавить обработку нажатия на кнопку
     }
 
 }

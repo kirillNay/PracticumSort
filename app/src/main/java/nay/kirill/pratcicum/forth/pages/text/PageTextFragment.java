@@ -11,12 +11,13 @@ import androidx.fragment.app.Fragment;
 import nay.kirill.pratcicum.forth.ListenersHolder;
 import nay.kirill.pratcicum.forth.R;
 import nay.kirill.pratcicum.forth.databinding.FragmentItemBinding;
+import nay.kirill.pratcicum.forth.pages.items.ItemsHolder;
 
 public class PageTextFragment extends Fragment implements ListenersHolder.OnItemsChanged {
 
     private FragmentItemBinding binding;
 
-    private ListTextAdapter adapter = new ListTextAdapter(TextItem.texts);
+    private ListTextAdapter adapter = new ListTextAdapter(ItemsHolder.textItems);
 
     PageTextFragment() { super(R.layout.fragment_item); }
 

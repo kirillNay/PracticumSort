@@ -5,7 +5,7 @@ import java.util.List;
 public class ListSorter {
 
     public void sort(List list) {
-        // TODO 3 добавить сортировку элементов
+        // TODO (3) добавить сортировку элементов
     }
 
 }

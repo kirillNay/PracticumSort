@@ -5,7 +5,7 @@ import java.util.List;
 public class ListShuffler {
 
     public void shuffle(List list) {
-        // TODO 3 реализовать тасовку значений
+        // TODO (3) реализовать тасовку значений
     }
 
 }
