@@ -12,7 +12,4 @@ public class ColorItem {
         return color;
     }
 
-    public void setColor(final int color) {
-        this.color = color;
-    }
 }
