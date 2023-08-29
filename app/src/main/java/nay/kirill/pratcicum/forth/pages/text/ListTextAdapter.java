@@ -2,6 +2,7 @@ package nay.kirill.pratcicum.forth.pages.text;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -44,6 +45,15 @@ public class ListTextAdapter extends RecyclerView.Adapter {
 
         void bind(TextItem item) {
             binding.getRoot().setText(item.getText());
+            setClickListener(item);
+        }
+
+        private void showMessage(String message) {
+            Toast.makeText(itemView.getContext(), message, Toast.LENGTH_SHORT).show();
+        }
+
+        private void setClickListener(TextItem item) {
+            // TODO добавить обработку нажатия на кнопку
         }
     }
 
