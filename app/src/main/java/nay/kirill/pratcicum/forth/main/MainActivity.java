@@ -54,14 +54,18 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
+    private void showMessage(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
     // Сортировка списка
     private void sort() {
-        Toast.makeText(this, R.string.sort, Toast.LENGTH_SHORT).show();
+        showMessage("Отсортировано!");
     }
 
     // Тасовка списка
     private void shuffle() {
-        Toast.makeText(this, R.string.shuffle, Toast.LENGTH_SHORT).show();
+        showMessage("Перетасовано!");
     }
 
     private void setButtonListener() {
