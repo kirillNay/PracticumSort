@@ -1,6 +1,8 @@
 package nay.kirill.pratcicum.forth.main;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -12,6 +14,8 @@ import nay.kirill.pratcicum.forth.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
+
+    private Button button;
 
     private PageItemAdapter adapter = new PageItemAdapter(this);
 
@@ -39,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
             tab.setText(name);
         });
         mediator.attach();
+
+        button = binding.button;
+        setButtonListener();
     }
 
     @Override
@@ -46,4 +53,19 @@ public class MainActivity extends AppCompatActivity {
         mediator.detach();
         super.onDestroy();
     }
+
+    // Сортировка списка
+    private void sort() {
+        Toast.makeText(this, R.string.sort, Toast.LENGTH_SHORT).show();
+    }
+
+    // Тасовка списка
+    private void shuffle() {
+        Toast.makeText(this, R.string.shuffle, Toast.LENGTH_SHORT).show();
+    }
+
+    private void setButtonListener() {
+        // TODO добавить обработку нажатия на кнопку
+    }
+
 }

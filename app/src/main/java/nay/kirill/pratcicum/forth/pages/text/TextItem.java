@@ -20,7 +20,7 @@ public class TextItem {
     }
 
     public static List<TextItem> texts = Arrays.asList(
-            new TextItem("От английского Integrated Development Environment (IDE)"),
+            new TextItem("От английского Integrated Development Environment (IDE) - "),
             new TextItem("комплексный набор инструментов"),
             new TextItem("разработчиков и разработчиц"),
             new TextItem("для написания"),

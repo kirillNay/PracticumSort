@@ -5,4 +5,7 @@
     <string name="first_item">Текст</string>
     <string name="second_item">Картинки</string>
     <string name="third_item">Цвета</string>
+
+    <string name="sort">Отсортировано!</string>
+    <string name="shuffle">Перетасовано!</string>
 </resources>
