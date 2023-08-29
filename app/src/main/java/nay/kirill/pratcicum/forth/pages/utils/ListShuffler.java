@@ -4,8 +4,8 @@ import java.util.List;
 
 public class ListShuffler {
 
-    List shuffle(List list) {
-        return list;
+    public void shuffle(List list) {
+        // TODO 3 реализовать тасовку значений
     }
 
 }

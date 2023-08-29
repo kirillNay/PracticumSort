@@ -4,8 +4,8 @@ import java.util.List;
 
 public class ListSorter {
 
-    List sort(List list) {
-        return list;
+    public void sort(List list) {
+        // TODO 3 добавить сортировку элементов
     }
 
 }

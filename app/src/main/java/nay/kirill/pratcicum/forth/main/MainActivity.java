@@ -8,14 +8,24 @@ import com.google.android.material.tabs.TabLayoutMediator;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import nay.kirill.pratcicum.forth.ListenersHolder;
 import nay.kirill.pratcicum.forth.R;
 import nay.kirill.pratcicum.forth.databinding.ActivityMainBinding;
+import nay.kirill.pratcicum.forth.pages.color.ColorItem;
+import nay.kirill.pratcicum.forth.pages.image.ImageItem;
+import nay.kirill.pratcicum.forth.pages.text.TextItem;
+import nay.kirill.pratcicum.forth.pages.utils.ListShuffler;
+import nay.kirill.pratcicum.forth.pages.utils.ListSorter;
 
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
 
     private Button button;
+
+    private ListSorter sorter = new ListSorter();
+
+    private ListShuffler shuffler = new ListShuffler();
 
     private PageItemAdapter adapter = new PageItemAdapter(this);
 
@@ -61,11 +71,17 @@ public class MainActivity extends AppCompatActivity {
     // Сортировка списка
     private void sort() {
         showMessage("Отсортировано!");
+
+        ListenersHolder.getInstance().itemsChanged();
     }
 
     // Тасовка списка
     private void shuffle() {
         showMessage("Перетасовано!");
+        shuffler.shuffle(TextItem.texts);
+        shuffler.shuffle(ImageItem.images);
+        shuffler.shuffle(ColorItem.colors);
+        ListenersHolder.getInstance().itemsChanged();
     }
 
     private void setButtonListener() {

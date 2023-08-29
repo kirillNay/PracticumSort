@@ -8,10 +8,11 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import nay.kirill.pratcicum.forth.ListenersHolder;
 import nay.kirill.pratcicum.forth.R;
 import nay.kirill.pratcicum.forth.databinding.FragmentItemBinding;
 
-public class PageTextFragment extends Fragment {
+public class PageTextFragment extends Fragment implements ListenersHolder.OnItemsChanged {
 
     private FragmentItemBinding binding;
 
@@ -24,6 +25,7 @@ public class PageTextFragment extends Fragment {
     public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
         binding = FragmentItemBinding.inflate(inflater);
         binding.getRoot().setAdapter(adapter);
+        ListenersHolder.getInstance().addListener(this);
         return binding.getRoot();
     }
 
@@ -38,4 +40,8 @@ public class PageTextFragment extends Fragment {
         return fragment;
     }
 
+    @Override
+    public void onItemsChanged() {
+        adapter.notifyDataSetChanged();
+    }
 }

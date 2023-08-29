@@ -16,10 +16,6 @@ public class ImageItem {
         return url;
     }
 
-    public void setUrl(final String url) {
-        this.url = url;
-    }
-
     public static List<ImageItem> images = new ArrayList<ImageItem>(
             Arrays.asList(
                     new ImageItem("1.jpg"),
