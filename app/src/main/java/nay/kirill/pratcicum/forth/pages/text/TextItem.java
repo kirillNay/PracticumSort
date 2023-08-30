@@ -1,6 +1,8 @@
 package nay.kirill.pratcicum.forth.pages.text;
 
-public class TextItem {
+import nay.kirill.pratcicum.forth.pages.ComparableItem;
+
+public class TextItem implements ComparableItem<TextItem> {
 
     private static int counter;
 
@@ -12,6 +14,13 @@ public class TextItem {
 
     public String getText() {
         return text;
+    }
+
+    @Override
+    public int compare(TextItem item) {
+        if (item.order == order) return 0;
+
+        return order > item.order ? 1 : -1;
     }
 
 }

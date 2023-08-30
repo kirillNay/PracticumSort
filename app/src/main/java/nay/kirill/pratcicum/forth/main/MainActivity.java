@@ -14,6 +14,8 @@ import nay.kirill.pratcicum.forth.databinding.ActivityMainBinding;
 import nay.kirill.pratcicum.forth.pages.items.ItemsHolder;
 import nay.kirill.pratcicum.forth.pages.utils.ListShuffler;
 import nay.kirill.pratcicum.forth.pages.utils.ListSorter;
+import nay.kirill.pratcicum.forth.pages.utils.clicklisteners.ClickListenerUtils;
+import nay.kirill.pratcicum.forth.pages.utils.clicklisteners.OnClickListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -87,7 +89,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setButtonListener() {
-        // TODO (1) добавить обработку нажатия на кнопку
+        ClickListenerUtils.setListeners(
+                button,
+                new OnClickListener() {
+
+                    @Override
+                    public void onClick() {
+                        sort();
+                    }
+
+                    @Override
+                    public void onLongClick() {
+                        shuffle();
+                    }
+
+                }
+        );
     }
 
 }
